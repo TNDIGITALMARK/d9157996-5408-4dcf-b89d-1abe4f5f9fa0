@@ -84,7 +84,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="/contact"
-                className="group px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-xl font-semibold transition-all hover:scale-105 shadow-glow-blue flex items-center gap-2"
+                className="group px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/20 text-white rounded-xl font-semibold transition-all hover:scale-105 backdrop-blur-sm flex items-center gap-2"
               >
                 Build Your AI Bot
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
