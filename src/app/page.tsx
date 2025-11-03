@@ -10,7 +10,7 @@ export default function HomePage() {
   const stats = [
     { value: '500+', label: 'Automations Built' },
     { value: '99.9%', label: 'Accuracy Rate' },
-    { value: '15hrs', label: 'Avg. Time Saved/Week' },
+    { value: '10hrs', label: 'Avg. Time Saved/Week' },
     { value: '3', label: 'Elite Developers' },
   ];
 
