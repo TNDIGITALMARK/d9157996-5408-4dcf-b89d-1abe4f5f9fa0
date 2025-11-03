@@ -37,19 +37,19 @@ export default function HomePage() {
 
   const team = [
     {
-      name: '🧠 Val Rojko',
+      name: 'Val Rojko',
       role: 'Lead AI Architect',
       experience: 'Passionate about building smart automation systems that actually make life easier',
       expertise: 'Focus on AI logic, chatbot design, and practical NLP solutions',
     },
     {
-      name: '⚙️ Klemen Vrhunec',
+      name: 'Klemen Vrhunec',
       role: 'Automation Specialist',
       experience: 'Enjoys connecting different tools and making them work together seamlessly',
       expertise: 'Focus on workflow automation and CRM integrations',
     },
     {
-      name: '🔬 Thor Frangež Križančič',
+      name: 'Thor Frangež Križančič',
       role: 'ML Engineer',
       experience: 'Curious about how machines learn and make decisions',
       expertise: 'Works on neural networks, model tuning, and optimization',
@@ -73,7 +73,7 @@ export default function HomePage() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
               <span className="gradient-text">Transform Your Business</span>
               <br />
-              <span className="text-white">with kreativa ai automations</span>
+              <span className="text-white">with KREATIVA AI automations</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed">
