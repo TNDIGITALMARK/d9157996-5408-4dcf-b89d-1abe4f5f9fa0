@@ -57,7 +57,7 @@ export function Navigation() {
             ))}
             <Link
               href="/contact"
-              className="px-6 py-2.5 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all hover:shadow-glow-blue hover:scale-105"
+              className="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/20 text-white rounded-xl font-semibold transition-all hover:scale-105 backdrop-blur-sm"
             >
               Build Your AI Bot
             </Link>
@@ -90,7 +90,7 @@ export function Navigation() {
               <Link
                 href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all text-center"
+                className="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/20 text-white rounded-xl font-semibold transition-all hover:scale-105 backdrop-blur-sm text-center"
               >
                 Build Your AI Bot
               </Link>
