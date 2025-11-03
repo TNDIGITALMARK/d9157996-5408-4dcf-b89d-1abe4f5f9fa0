@@ -28,7 +28,7 @@ export default function ServicesPage() {
       icon: Database,
       title: 'CRM Management Bots',
       description: 'Smart automation that updates and manages client relationships automatically, keeping your CRM pristine and actionable.',
-      stats: '500+ records updated daily',
+      stats: '100+ records updated daily',
       features: [
         'Automatic client data synchronization',
         'Intelligent lead scoring and prioritization',
