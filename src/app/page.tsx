@@ -8,7 +8,7 @@ import { ArrowRight, Sparkles, Users, CheckCircle2, TrendingUp } from 'lucide-re
 
 export default function HomePage() {
   const stats = [
-    { value: '500+', label: 'Automations Built' },
+    { value: '100+', label: 'Automations Built' },
     { value: '99.9%', label: 'Accuracy Rate' },
     { value: '10hrs', label: 'Avg. Time Saved/Week' },
     { value: '3', label: 'Elite Developers' },
@@ -37,19 +37,19 @@ export default function HomePage() {
 
   const team = [
     {
-      name: 'Alex Chen',
+      name: 'Val Rojko',
       role: 'Lead AI Architect',
       experience: '8 years experience',
       expertise: 'Former Google AI researcher, NLP specialist',
     },
     {
-      name: 'Sarah Martinez',
+      name: 'Klemen Vrhunec',
       role: 'Automation Specialist',
       experience: '6 years experience',
       expertise: 'Enterprise integration expert',
     },
     {
-      name: 'David Kim',
+      name: 'Thor Frangež Križančič',
       role: 'ML Engineer',
       experience: '7 years experience',
       expertise: 'Neural network optimization',
@@ -73,7 +73,7 @@ export default function HomePage() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
               <span className="gradient-text">Transform Your Business</span>
               <br />
-              <span className="text-white">With KREATIVA AI Intelligent Automation</span>
+              <span className="text-white">With kreativa ai KREATIVA AI Intelligent Automation</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed">
