@@ -78,8 +78,8 @@ export default function ContactPage() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@eliteautomation.ai',
-      href: 'mailto:hello@eliteautomation.ai',
+      value: 'hello@kreativa.ai',
+      href: 'mailto:hello@kreativa.ai',
     },
     {
       icon: Phone,

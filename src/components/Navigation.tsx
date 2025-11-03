@@ -39,7 +39,7 @@ export function Navigation() {
                 <span className="text-white font-bold text-xl">AI</span>
               </div>
               <span className="text-xl font-bold text-white tracking-tight group-hover:text-primary transition-colors">
-                Elite Automation
+                KREATIVA AI
               </span>
             </div>
           </Link>

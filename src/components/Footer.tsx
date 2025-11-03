@@ -10,7 +10,7 @@ export function Footer() {
     { icon: Twitter, href: '#', label: 'Twitter' },
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
     { icon: Github, href: '#', label: 'Github' },
-    { icon: Mail, href: 'mailto:hello@eliteautomation.ai', label: 'Email' },
+    { icon: Mail, href: 'mailto:hello@kreativa.ai', label: 'Email' },
   ];
 
   const footerLinks = [
@@ -52,7 +52,7 @@ export function Footer() {
                 <span className="text-white font-bold text-xl">AI</span>
               </div>
               <span className="text-xl font-bold text-white tracking-tight">
-                Elite Automation
+                KREATIVA AI
               </span>
             </div>
             <p className="text-white/60 mb-6 max-w-sm">
@@ -96,7 +96,7 @@ export function Footer() {
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/50 text-sm">
-              © {currentYear} Elite Automation. All rights reserved.
+              © {currentYear} KREATIVA AI. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link href="/privacy" className="text-white/50 hover:text-white text-sm transition-colors">
