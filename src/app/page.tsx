@@ -37,22 +37,22 @@ export default function HomePage() {
 
   const team = [
     {
-      name: 'Val Rojko',
+      name: '🧠 Val Rojko',
       role: 'Lead AI Architect',
-      experience: '8 years experience',
-      expertise: 'Former Google AI researcher, NLP specialist',
+      experience: 'Passionate about building smart automation systems that actually make life easier',
+      expertise: 'Focus on AI logic, chatbot design, and practical NLP solutions',
     },
     {
-      name: 'Klemen Vrhunec',
+      name: '⚙️ Klemen Vrhunec',
       role: 'Automation Specialist',
-      experience: '6 years experience',
-      expertise: 'Enterprise integration expert',
+      experience: 'Enjoys connecting different tools and making them work together seamlessly',
+      expertise: 'Focus on workflow automation and CRM integrations',
     },
     {
-      name: 'Thor Frangež Križančič',
+      name: '🔬 Thor Frangež Križančič',
       role: 'ML Engineer',
-      experience: '7 years experience',
-      expertise: 'Neural network optimization',
+      experience: 'Curious about how machines learn and make decisions',
+      expertise: 'Works on neural networks, model tuning, and optimization',
     },
   ];
 
