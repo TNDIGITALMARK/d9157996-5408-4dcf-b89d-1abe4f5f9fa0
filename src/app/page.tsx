@@ -4,6 +4,7 @@ import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { AIBackground } from '@/components/AIBackground';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Sparkles, Users, CheckCircle2, TrendingUp } from 'lucide-react';
 
 export default function HomePage() {
@@ -152,9 +153,22 @@ export default function HomePage() {
                 key={index}
                 className="group p-8 bg-card border border-white/10 rounded-2xl hover:scale-105 transition-all shadow-md hover:shadow-lg hover:shadow-primary/20"
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-6 flex items-center justify-center text-3xl font-bold shadow-glow-blue">
-                  {member.name.split(' ').map(n => n[0]).join('')}
-                </div>
+                {member.name === 'Klemen Vrhunec' ? (
+                  <div className="w-20 h-20 rounded-full mx-auto mb-6 overflow-hidden shadow-glow-blue relative">
+                    <Image
+                      src="/klemen-vrhunec.jpeg"
+                      alt="Klemen Vrhunec"
+                      width={80}
+                      height={80}
+                      className="object-cover object-center w-full h-full"
+                      priority
+                    />
+                  </div>
+                ) : (
+                  <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-6 flex items-center justify-center text-3xl font-bold shadow-glow-blue">
+                    {member.name.split(' ').map(n => n[0]).join('')}
+                  </div>
+                )}
                 <h4 className="text-xl font-bold mb-2">{member.name}</h4>
                 <p className="text-primary font-semibold mb-2">{member.role}</p>
                 <p className="text-sm text-white/60 mb-3">{member.experience}</p>
