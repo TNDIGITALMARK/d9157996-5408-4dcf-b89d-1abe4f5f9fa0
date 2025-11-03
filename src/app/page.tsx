@@ -73,7 +73,7 @@ export default function HomePage() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
               <span className="gradient-text">Transform Your Business</span>
               <br />
-              <span className="text-white">With kreativa ai KREATIVA AI Intelligent Automation</span>
+              <span className="text-white">with kreativa ai automations</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed">
