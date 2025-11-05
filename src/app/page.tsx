@@ -156,7 +156,7 @@ export default function HomePage() {
                 {member.name === 'Klemen Vrhunec' ? (
                   <div className="w-20 h-20 rounded-full mx-auto mb-6 overflow-hidden shadow-glow-blue relative">
                     <Image
-                      src="/klemen-vrhunec.jpeg"
+                      src="/generated/klemen-vrhunec-initials.png"
                       alt="Klemen Vrhunec"
                       width={80}
                       height={80}
