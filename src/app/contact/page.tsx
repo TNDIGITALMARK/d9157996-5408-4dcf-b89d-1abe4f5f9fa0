@@ -78,19 +78,19 @@ export default function ContactPage() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@kreativa.ai',
-      href: 'mailto:hello@kreativa.ai',
+      value: 'Enquire@kreativa-ai.com',
+      href: 'mailto:Enquire@kreativa-ai.com',
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '+386 41 426 351',
+      href: 'tel:+38641426351',
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Maribor, Slovenia',
       href: '#',
     },
   ];
@@ -346,7 +346,7 @@ export default function ContactPage() {
               <div className="p-8 bg-card border border-white/10 rounded-2xl">
                 <h3 className="text-xl font-bold mb-4">Availability</h3>
                 <p className="text-white/70 mb-4">
-                  Our team is available Monday to Friday, 9 AM - 6 PM PST
+                  Our team is available 24/7, every day of the week
                 </p>
                 <p className="text-sm text-white/60">
                   For urgent inquiries, please call us directly or mention "urgent" in your message.
