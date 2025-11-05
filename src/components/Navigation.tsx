@@ -3,10 +3,12 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,9 +18,22 @@ export function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleServicesClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // If we're on the homepage, scroll to services section instead of navigating
+    if (pathname === '/') {
+      e.preventDefault();
+      const servicesSection = document.getElementById('services');
+      if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setIsMobileMenuOpen(false);
+      }
+    }
+    // Otherwise, let the link navigate to /services page normally
+  };
+
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/services', label: 'Services' },
+    { href: '/services', label: 'Services', onClick: handleServicesClick },
     { href: '/contact', label: 'Contact' },
   ];
 
@@ -50,6 +65,7 @@ export function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
+                onClick={link.onClick}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.label}
@@ -81,7 +97,13 @@ export function Navigation() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    if (link.onClick) {
+                      link.onClick(e);
+                    } else {
+                      setIsMobileMenuOpen(false);
+                    }
+                  }}
                   className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
                 >
                   {link.label}

@@ -153,8 +153,24 @@ export default function HomePage() {
                 key={index}
                 className="group p-6 surface-elevated rounded-lg hover:-translate-y-1 transition-all hover:shadow-md"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-5 flex items-center justify-center text-2xl font-bold shadow-glow">
-                  {member.name.split(' ').map(n => n[0]).join('')}
+                <div className="relative w-20 h-20 mx-auto mb-5">
+                  {/* Futuristic hexagonal container */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rotate-45 rounded-lg"
+                       style={{ clipPath: 'polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)' }}>
+                  </div>
+                  {/* Inner glow ring */}
+                  <div className="absolute inset-[3px] bg-background/90 backdrop-blur-sm rotate-45 rounded-lg"
+                       style={{ clipPath: 'polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)' }}>
+                  </div>
+                  {/* Initials display */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-2xl font-bold gradient-text tracking-tighter" style={{ fontFamily: 'Outfit' }}>
+                      {member.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                  {/* Animated corner accents */}
+                  <div className="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full opacity-60 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="absolute bottom-0 left-0 w-2 h-2 bg-accent rounded-full opacity-60 group-hover:opacity-100 transition-opacity"></div>
                 </div>
                 <h4 className="text-lg font-bold mb-1.5">{member.name}</h4>
                 <p className="text-primary font-medium text-sm mb-2">{member.role}</p>
@@ -167,7 +183,7 @@ export default function HomePage() {
       </section>
 
       {/* Case Studies Section */}
-      <section id="case-studies" className="relative py-24 px-6 bg-gradient-to-b from-background to-secondary">
+      <section id="services" className="relative py-24 px-6 bg-gradient-to-b from-background to-secondary">
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 surface-elevated rounded-full mb-6">
