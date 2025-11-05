@@ -124,7 +124,7 @@ export default function ContactPage() {
               {isSubmitted ? (
                 <div className="p-12 bg-card border border-green-500/30 rounded-2xl text-center animate-fade-in">
                   <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle2 size={40} className="text-green-500" />
+                    <CheckCircle2 size={40} strokeWidth={2} className="text-green-500" />
                   </div>
                   <h3 className="text-3xl font-bold mb-4">Thank You!</h3>
                   <p className="text-white/70 text-lg">
@@ -280,7 +280,7 @@ export default function ContactPage() {
                     ) : (
                       <>
                         Send Message
-                        <Send size={20} />
+                        <Send size={20} strokeWidth={2} />
                       </>
                     )}
                   </button>
@@ -301,7 +301,7 @@ export default function ContactPage() {
                       className="flex items-start gap-4 group hover:translate-x-2 transition-transform"
                     >
                       <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                        <info.icon size={24} className="text-primary" />
+                        <info.icon size={24} strokeWidth={2} className="text-primary" />
                       </div>
                       <div>
                         <div className="text-sm text-white/60 mb-1">{info.label}</div>

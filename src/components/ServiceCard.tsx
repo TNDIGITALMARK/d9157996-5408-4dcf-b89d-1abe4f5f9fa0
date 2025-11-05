@@ -38,7 +38,7 @@ export function ServiceCard({ icon: Icon, title, description, stats, features, g
         <div
           className={`w-16 h-16 rounded-xl ${gradient} flex items-center justify-center shadow-glow-blue transition-all duration-500 group-hover:scale-110`}
         >
-          <Icon size={32} className="text-white" />
+          <Icon size={32} strokeWidth={2} className="text-white" />
         </div>
       </div>
 

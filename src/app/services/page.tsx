@@ -115,7 +115,7 @@ export default function ServicesPage() {
         <div className="container mx-auto text-center relative z-10">
           <div className="animate-fade-in">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-8 backdrop-blur-sm">
-              <Sparkles size={16} className="text-primary" />
+              <Sparkles size={16} strokeWidth={2} className="text-primary" />
               <span className="text-sm text-white/80">AI-Powered Automation Services</span>
             </div>
 
@@ -173,7 +173,7 @@ export default function ServicesPage() {
                 <p className="text-white/70">{step.description}</p>
                 {index < processSteps.length - 1 && (
                   <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                    <ArrowRight className="text-primary/40" size={24} />
+                    <ArrowRight className="text-primary/40" size={24} strokeWidth={2} />
                   </div>
                 )}
               </div>
@@ -197,7 +197,7 @@ export default function ServicesPage() {
               className="inline-flex items-center gap-2 px-10 py-5 bg-white text-black hover:bg-white/90 rounded-xl font-bold text-lg transition-all hover:scale-105 shadow-lg"
             >
               Get a Free Consultation
-              <ArrowRight size={24} />
+              <ArrowRight size={24} strokeWidth={2} />
             </Link>
           </div>
         </div>

@@ -67,7 +67,7 @@ export default function HomePage() {
         <div className="container mx-auto text-center relative z-10">
           <div className="animate-fade-in">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-8 backdrop-blur-sm">
-              <Sparkles size={16} className="text-primary" />
+              <Sparkles size={16} strokeWidth={2} className="text-primary" />
               <span className="text-sm text-white/80">Elite AI Development Team</span>
             </div>
 
@@ -87,13 +87,14 @@ export default function HomePage() {
                 className="group px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/20 text-white rounded-xl font-semibold transition-all hover:scale-105 backdrop-blur-sm flex items-center gap-2"
               >
                 Build Your AI Bot
-                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight size={20} strokeWidth={2} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/services"
-                className="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/20 text-white rounded-xl font-semibold transition-all hover:scale-105 backdrop-blur-sm"
+                className="group px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/20 text-white rounded-xl font-semibold transition-all hover:scale-105 backdrop-blur-sm flex items-center gap-2"
               >
                 Explore Services
+                <ArrowRight size={20} strokeWidth={2} className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
@@ -138,7 +139,7 @@ export default function HomePage() {
           {/* Team Section */}
           <div className="mb-16 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-8 backdrop-blur-sm">
-              <Users size={16} className="text-accent" />
+              <Users size={16} strokeWidth={2} className="text-accent" />
               <span className="text-sm text-white/80">Meet The Team</span>
             </div>
             <h3 className="text-3xl font-bold mb-4">Elite Developers</h3>
@@ -206,7 +207,7 @@ export default function HomePage() {
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-8 backdrop-blur-sm">
-              <TrendingUp size={16} className="text-primary" />
+              <TrendingUp size={16} strokeWidth={2} className="text-primary" />
               <span className="text-sm text-white/80">Proven Results</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -229,7 +230,7 @@ export default function HomePage() {
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 size={20} className="text-primary flex-shrink-0 mt-1" />
+                    <CheckCircle2 size={20} strokeWidth={2} className="text-primary flex-shrink-0 mt-1" />
                     <div>
                       <p className="text-white font-semibold">{study.result}</p>
                     </div>
@@ -259,7 +260,7 @@ export default function HomePage() {
               className="inline-flex items-center gap-2 px-10 py-5 bg-white text-black hover:bg-white/90 rounded-xl font-bold text-lg transition-all hover:scale-105 shadow-lg"
             >
               Get a Free Consultation
-              <ArrowRight size={24} />
+              <ArrowRight size={24} strokeWidth={2} />
             </Link>
           </div>
         </div>
