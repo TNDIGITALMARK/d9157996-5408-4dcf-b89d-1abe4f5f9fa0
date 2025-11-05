@@ -57,78 +57,78 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-background text-foreground">
       <AIBackground />
       <Navigation />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-6 pt-20">
         <div className="container mx-auto text-center relative z-10">
-          <div className="animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-8 backdrop-blur-sm">
-              <Sparkles size={16} strokeWidth={2} className="text-primary" />
-              <span className="text-sm text-white/80">Elite AI Development Team</span>
+          <div className="animate-fade-in max-w-5xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 surface-elevated rounded-full mb-8">
+              <Sparkles size={14} strokeWidth={2.5} className="text-primary" />
+              <span className="text-xs font-medium text-muted-foreground tracking-wide">Elite AI Development Team</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-[1.1] tracking-tight">
               <span className="gradient-text">Transform Your Business</span>
               <br />
-              <span className="text-white">with KREATIVA AI automations</span>
+              <span>with AI Automation</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
               Elite AI developers building custom agents that automate your most critical business processes
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <Link
                 href="/contact"
-                className="group px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/20 text-white rounded-xl font-semibold transition-all hover:scale-105 backdrop-blur-sm flex items-center gap-2"
+                className="group px-6 py-2.5 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-medium transition-all hover:-translate-y-0.5 flex items-center gap-2 shadow-sm"
               >
                 Build Your AI Bot
-                <ArrowRight size={20} strokeWidth={2} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight size={16} strokeWidth={2.5} className="group-hover:translate-x-0.5 transition-transform" />
               </Link>
               <Link
                 href="/services"
-                className="group px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/20 text-white rounded-xl font-semibold transition-all hover:scale-105 backdrop-blur-sm flex items-center gap-2"
+                className="group px-6 py-2.5 surface-elevated hover:bg-secondary text-foreground rounded-lg font-medium transition-all hover:-translate-y-0.5 flex items-center gap-2"
               >
                 Explore Services
-                <ArrowRight size={20} strokeWidth={2} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight size={16} strokeWidth={2.5} className="group-hover:translate-x-0.5 transition-transform" />
               </Link>
             </div>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl animate-slide-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="p-5 surface-elevated rounded-lg animate-scale-in hover:shadow-md transition-shadow"
+                style={{ animationDelay: `${index * 0.05}s` }}
               >
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.value}</div>
-                <div className="text-sm text-white/60">{stat.label}</div>
+                <div className="text-2xl md:text-3xl font-bold text-primary mb-1">{stat.value}</div>
+                <div className="text-xs text-muted-foreground font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
-            <div className="w-1.5 h-3 bg-white/50 rounded-full" />
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
+          <div className="w-5 h-8 border border-border rounded-full flex items-start justify-center p-1.5">
+            <div className="w-1 h-2 bg-muted-foreground rounded-full" />
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="relative py-32 px-6">
+      <section id="about" className="relative py-24 px-6">
         <div className="container mx-auto relative z-10">
-          <div className="max-w-4xl mx-auto text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               <span className="gradient-text">Our Mission</span>
             </h2>
-            <p className="text-xl text-white/70 leading-relaxed">
+            <p className="text-base text-muted-foreground leading-relaxed">
               We help companies save time and money through AI-driven automation.
               We build chatbots that seamlessly integrate into their existing workflows and tools,
               delivering enterprise-grade results with boutique-level attention.
@@ -136,30 +136,30 @@ export default function HomePage() {
           </div>
 
           {/* Team Section */}
-          <div className="mb-16 text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-8 backdrop-blur-sm">
-              <Users size={16} strokeWidth={2} className="text-accent" />
-              <span className="text-sm text-white/80">Meet The Team</span>
+          <div className="mb-12 text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 surface-elevated rounded-full mb-6">
+              <Users size={14} strokeWidth={2.5} className="text-accent" />
+              <span className="text-xs font-medium text-muted-foreground tracking-wide">Meet The Team</span>
             </div>
-            <h3 className="text-3xl font-bold mb-4">Elite Developers</h3>
-            <p className="text-white/60 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold mb-3">Elite Developers</h3>
+            <p className="text-sm text-muted-foreground max-w-xl mx-auto">
               Three specialized AI experts with decades of combined experience in automation and machine learning
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
             {team.map((member, index) => (
               <div
                 key={index}
-                className="group p-8 bg-card border border-white/10 rounded-2xl hover:scale-105 transition-all shadow-md hover:shadow-lg hover:shadow-primary/20"
+                className="group p-6 surface-elevated rounded-lg hover:-translate-y-1 transition-all hover:shadow-md"
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-6 flex items-center justify-center text-3xl font-bold shadow-glow-blue">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-5 flex items-center justify-center text-2xl font-bold shadow-glow">
                   {member.name.split(' ').map(n => n[0]).join('')}
                 </div>
-                <h4 className="text-xl font-bold mb-2">{member.name}</h4>
-                <p className="text-primary font-semibold mb-2">{member.role}</p>
-                <p className="text-sm text-white/60 mb-3">{member.experience}</p>
-                <p className="text-sm text-white/70">{member.expertise}</p>
+                <h4 className="text-lg font-bold mb-1.5">{member.name}</h4>
+                <p className="text-primary font-medium text-sm mb-2">{member.role}</p>
+                <p className="text-xs text-muted-foreground mb-2 leading-relaxed">{member.experience}</p>
+                <p className="text-xs text-muted-foreground leading-relaxed">{member.expertise}</p>
               </div>
             ))}
           </div>
@@ -167,40 +167,40 @@ export default function HomePage() {
       </section>
 
       {/* Case Studies Section */}
-      <section id="case-studies" className="relative py-32 px-6 bg-gradient-to-b from-black to-deep-charcoal">
+      <section id="case-studies" className="relative py-24 px-6 bg-gradient-to-b from-background to-secondary">
         <div className="container mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-8 backdrop-blur-sm">
-              <TrendingUp size={16} strokeWidth={2} className="text-primary" />
-              <span className="text-sm text-white/80">Proven Results</span>
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 surface-elevated rounded-full mb-6">
+              <TrendingUp size={14} strokeWidth={2.5} className="text-primary" />
+              <span className="text-xs font-medium text-muted-foreground tracking-wide">Proven Results</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               <span className="gradient-text">Case Studies</span>
             </h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
               Real businesses, real results. See how our AI automation solutions transform operations.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
             {caseStudies.map((study, index) => (
               <div
                 key={index}
-                className="p-8 bg-card border border-white/10 rounded-2xl hover:scale-105 transition-all shadow-md hover:shadow-lg hover:shadow-primary/20 group"
+                className="p-6 surface-elevated rounded-lg hover:-translate-y-1 transition-all hover:shadow-md group"
               >
-                <div className="mb-6">
-                  <div className="text-sm text-accent font-semibold mb-2">{study.company}</div>
-                  <h4 className="text-xl font-bold mb-4">{study.solution}</h4>
+                <div className="mb-5">
+                  <div className="text-xs text-accent font-semibold mb-2 uppercase tracking-wider">{study.company}</div>
+                  <h4 className="text-lg font-bold mb-3">{study.solution}</h4>
                 </div>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle2 size={20} strokeWidth={2} className="text-primary flex-shrink-0 mt-1" />
+                <div className="space-y-3">
+                  <div className="flex items-start gap-2.5">
+                    <CheckCircle2 size={18} strokeWidth={2.5} className="text-primary flex-shrink-0 mt-0.5" />
                     <div>
-                      <p className="text-white font-semibold">{study.result}</p>
+                      <p className="text-sm font-semibold">{study.result}</p>
                     </div>
                   </div>
-                  <div className="pt-4 border-t border-white/10">
-                    <p className="text-sm text-white/60">{study.impact}</p>
+                  <div className="pt-3 border-t border-border">
+                    <p className="text-xs text-muted-foreground">{study.impact}</p>
                   </div>
                 </div>
               </div>
@@ -210,21 +210,21 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-32 px-6">
+      <section className="relative py-24 px-6">
         <div className="container mx-auto relative z-10">
-          <div className="max-w-4xl mx-auto text-center p-12 bg-gradient-to-br from-primary/20 to-accent/20 border border-white/20 rounded-3xl backdrop-blur-sm">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <div className="max-w-3xl mx-auto text-center p-8 bg-gradient-to-br from-primary/10 to-accent/10 border border-border rounded-xl">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Automate Your Business?
             </h2>
-            <p className="text-xl text-white/80 mb-8">
+            <p className="text-base text-muted-foreground mb-6">
               If you can imagine it, we can build it. Let's create your custom AI solution.
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-10 py-5 bg-white text-black hover:bg-white/90 rounded-xl font-bold text-lg transition-all hover:scale-105 shadow-lg"
+              className="inline-flex items-center gap-2 px-6 py-2.5 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-medium transition-all hover:-translate-y-0.5 shadow-sm"
             >
               Get a Free Consultation
-              <ArrowRight size={24} strokeWidth={2} />
+              <ArrowRight size={16} strokeWidth={2.5} />
             </Link>
           </div>
         </div>

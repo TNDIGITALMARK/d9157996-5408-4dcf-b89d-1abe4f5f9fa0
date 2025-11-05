@@ -106,24 +106,24 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-background text-foreground">
       <AIBackground />
       <Navigation />
 
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center px-6 pt-32 pb-20">
         <div className="container mx-auto text-center relative z-10">
-          <div className="animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-8 backdrop-blur-sm">
-              <Sparkles size={16} strokeWidth={2} className="text-primary" />
-              <span className="text-sm text-white/80">AI-Powered Automation Services</span>
+          <div className="animate-fade-in max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 surface-elevated rounded-full mb-8">
+              <Sparkles size={14} strokeWidth={2.5} className="text-primary" />
+              <span className="text-xs font-medium text-muted-foreground tracking-wide">AI-Powered Automation Services</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-[1.1] tracking-tight">
               <span className="gradient-text">Our Services</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-muted-foreground mb-10 max-w-3xl mx-auto">
               From Excel automation to voice AI assistants, we build intelligent solutions
               that transform your business operations and save you time and money.
             </p>
@@ -151,29 +151,29 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="relative py-32 px-6 bg-gradient-to-b from-black to-deep-charcoal">
+      <section className="relative py-24 px-6 bg-gradient-to-b from-background to-secondary">
         <div className="container mx-auto relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               <span className="gradient-text">Our Process</span>
             </h2>
-            <p className="text-xl text-white/70 max-w-3xl mx-auto">
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
               A streamlined approach to building your custom AI automation solution
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
             {processSteps.map((step, index) => (
               <div
                 key={index}
-                className="relative p-8 bg-card border border-white/10 rounded-2xl hover:scale-105 transition-all shadow-md hover:shadow-lg hover:shadow-primary/20"
+                className="relative p-6 surface-elevated rounded-lg hover:-translate-y-1 transition-all hover:shadow-md"
               >
-                <div className="text-6xl font-bold text-primary/20 mb-4">{step.number}</div>
-                <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-                <p className="text-white/70">{step.description}</p>
+                <div className="text-5xl font-bold text-primary/20 mb-3">{step.number}</div>
+                <h3 className="text-lg font-bold mb-2">{step.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
                 {index < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                    <ArrowRight className="text-primary/40" size={24} strokeWidth={2} />
+                  <div className="hidden lg:block absolute top-1/2 -right-2.5 transform -translate-y-1/2">
+                    <ArrowRight className="text-primary/30" size={20} strokeWidth={2.5} />
                   </div>
                 )}
               </div>
@@ -183,21 +183,21 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-32 px-6">
+      <section className="relative py-24 px-6">
         <div className="container mx-auto relative z-10">
-          <div className="max-w-4xl mx-auto text-center p-12 bg-gradient-to-br from-primary/20 to-accent/20 border border-white/20 rounded-3xl backdrop-blur-sm">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <div className="max-w-3xl mx-auto text-center p-8 bg-gradient-to-br from-primary/10 to-accent/10 border border-border rounded-xl">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Build Your Custom Solution?
             </h2>
-            <p className="text-xl text-white/80 mb-8">
+            <p className="text-base text-muted-foreground mb-6">
               Let's discuss how AI automation can transform your business operations
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-10 py-5 bg-white text-black hover:bg-white/90 rounded-xl font-bold text-lg transition-all hover:scale-105 shadow-lg"
+              className="inline-flex items-center gap-2 px-6 py-2.5 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-medium transition-all hover:-translate-y-0.5 shadow-sm"
             >
               Get a Free Consultation
-              <ArrowRight size={24} strokeWidth={2} />
+              <ArrowRight size={16} strokeWidth={2.5} />
             </Link>
           </div>
         </div>

@@ -97,18 +97,18 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-background text-foreground">
       <AIBackground />
       <Navigation />
 
       {/* Hero Section */}
       <section className="relative min-h-[50vh] flex items-center justify-center px-6 pt-32 pb-20">
         <div className="container mx-auto text-center relative z-10">
-          <div className="animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <div className="animate-fade-in max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-[1.1] tracking-tight">
               <span className="gradient-text">Get in Touch</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
               Let's discuss how we can automate your business processes and save you time and money
             </p>
           </div>
@@ -122,21 +122,21 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="order-2 lg:order-1">
               {isSubmitted ? (
-                <div className="p-12 bg-card border border-green-500/30 rounded-2xl text-center animate-fade-in">
-                  <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle2 size={40} strokeWidth={2} className="text-green-500" />
+                <div className="p-10 surface-elevated border-green-500/30 rounded-lg text-center animate-fade-in">
+                  <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-5">
+                    <CheckCircle2 size={32} strokeWidth={2.5} className="text-green-500" />
                   </div>
-                  <h3 className="text-3xl font-bold mb-4">Thank You!</h3>
-                  <p className="text-white/70 text-lg">
+                  <h3 className="text-2xl font-bold mb-3">Thank You!</h3>
+                  <p className="text-muted-foreground text-sm">
                     We've received your request and will get back to you within 24 hours.
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-5">
                   {/* Name & Email */}
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid md:grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-semibold mb-2 text-white/90">
+                      <label htmlFor="name" className="block text-sm font-medium mb-2">
                         Your Name *
                       </label>
                       <input
@@ -146,12 +146,12 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                        className="w-full px-3.5 py-2.5 bg-input border border-border rounded-lg text-sm"
                         placeholder="John Doe"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-semibold mb-2 text-white/90">
+                      <label htmlFor="email" className="block text-sm font-medium mb-2">
                         Email Address *
                       </label>
                       <input
@@ -161,7 +161,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                        className="w-full px-3.5 py-2.5 bg-input border border-border rounded-lg text-sm"
                         placeholder="john@company.com"
                       />
                     </div>
@@ -169,7 +169,7 @@ export default function ContactPage() {
 
                   {/* Company */}
                   <div>
-                    <label htmlFor="company" className="block text-sm font-semibold mb-2 text-white/90">
+                    <label htmlFor="company" className="block text-sm font-medium mb-2">
                       Company Name
                     </label>
                     <input
@@ -178,14 +178,14 @@ export default function ContactPage() {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                      className="w-full px-3.5 py-2.5 bg-input border border-border rounded-lg text-sm"
                       placeholder="Your Company Inc."
                     />
                   </div>
 
                   {/* Service Selection */}
                   <div>
-                    <label htmlFor="service" className="block text-sm font-semibold mb-2 text-white/90">
+                    <label htmlFor="service" className="block text-sm font-medium mb-2">
                       Service Interested In *
                     </label>
                     <select
@@ -194,7 +194,7 @@ export default function ContactPage() {
                       value={formData.service}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                      className="w-full px-3.5 py-2.5 bg-input border border-border rounded-lg text-sm"
                     >
                       <option value="">Select a service</option>
                       {services.map((service) => (
@@ -206,9 +206,9 @@ export default function ContactPage() {
                   </div>
 
                   {/* Budget & Timeline */}
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid md:grid-cols-2 gap-5">
                     <div>
-                      <label htmlFor="budget" className="block text-sm font-semibold mb-2 text-white/90">
+                      <label htmlFor="budget" className="block text-sm font-medium mb-2">
                         Budget Range *
                       </label>
                       <select
@@ -217,7 +217,7 @@ export default function ContactPage() {
                         value={formData.budget}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                        className="w-full px-3.5 py-2.5 bg-input border border-border rounded-lg text-sm"
                       >
                         <option value="">Select budget</option>
                         {budgetRanges.map((range) => (
@@ -228,7 +228,7 @@ export default function ContactPage() {
                       </select>
                     </div>
                     <div>
-                      <label htmlFor="timeline" className="block text-sm font-semibold mb-2 text-white/90">
+                      <label htmlFor="timeline" className="block text-sm font-medium mb-2">
                         Project Timeline *
                       </label>
                       <select
@@ -237,7 +237,7 @@ export default function ContactPage() {
                         value={formData.timeline}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                        className="w-full px-3.5 py-2.5 bg-input border border-border rounded-lg text-sm"
                       >
                         <option value="">Select timeline</option>
                         {timelines.map((timeline) => (
@@ -251,7 +251,7 @@ export default function ContactPage() {
 
                   {/* Message */}
                   <div>
-                    <label htmlFor="message" className="block text-sm font-semibold mb-2 text-white/90">
+                    <label htmlFor="message" className="block text-sm font-medium mb-2">
                       Project Details *
                     </label>
                     <textarea
@@ -260,8 +260,8 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      rows={6}
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none"
+                      rows={5}
+                      className="w-full px-3.5 py-2.5 bg-input border border-border rounded-lg text-sm resize-none"
                       placeholder="Tell us about your automation needs..."
                     />
                   </div>
@@ -270,17 +270,17 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full px-8 py-4 bg-primary hover:bg-primary/90 disabled:bg-primary/50 text-white rounded-xl font-semibold transition-all hover:scale-105 shadow-glow-blue flex items-center justify-center gap-2"
+                    className="w-full px-6 py-2.5 bg-primary hover:bg-primary/90 disabled:bg-primary/50 text-primary-foreground rounded-lg font-medium transition-all hover:-translate-y-0.5 shadow-sm flex items-center justify-center gap-2"
                   >
                     {isLoading ? (
                       <>
-                        <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                        Sending...
+                        <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        <span>Sending...</span>
                       </>
                     ) : (
                       <>
-                        Send Message
-                        <Send size={20} strokeWidth={2} />
+                        <span>Send Message</span>
+                        <Send size={16} strokeWidth={2.5} />
                       </>
                     )}
                   </button>
@@ -289,23 +289,23 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Info & Team */}
-            <div className="order-1 lg:order-2 space-y-8">
+            <div className="order-1 lg:order-2 space-y-6">
               {/* Contact Information */}
-              <div className="p-8 bg-card border border-white/10 rounded-2xl">
-                <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-                <div className="space-y-6">
+              <div className="p-6 surface-elevated rounded-lg">
+                <h3 className="text-xl font-bold mb-5">Contact Information</h3>
+                <div className="space-y-4">
                   {contactInfo.map((info, index) => (
                     <a
                       key={index}
                       href={info.href}
-                      className="flex items-start gap-4 group hover:translate-x-2 transition-transform"
+                      className="flex items-start gap-3 group hover:translate-x-1 transition-transform"
                     >
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                        <info.icon size={24} strokeWidth={2} className="text-primary" />
+                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/15 transition-colors">
+                        <info.icon size={20} strokeWidth={2.5} className="text-primary" />
                       </div>
                       <div>
-                        <div className="text-sm text-white/60 mb-1">{info.label}</div>
-                        <div className="text-white font-medium">{info.value}</div>
+                        <div className="text-xs text-muted-foreground mb-0.5">{info.label}</div>
+                        <div className="font-medium text-sm">{info.value}</div>
                       </div>
                     </a>
                   ))}
@@ -313,30 +313,30 @@ export default function ContactPage() {
               </div>
 
               {/* Quick Info */}
-              <div className="p-8 bg-gradient-to-br from-primary/10 to-accent/10 border border-white/10 rounded-2xl">
-                <h3 className="text-2xl font-bold mb-4">What Happens Next?</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold">
+              <div className="p-6 bg-gradient-to-br from-primary/10 to-accent/10 border border-border rounded-lg">
+                <h3 className="text-xl font-bold mb-4">What Happens Next?</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-2.5">
+                    <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-primary-foreground">
                       1
                     </div>
-                    <p className="text-white/80">
+                    <p className="text-muted-foreground text-sm leading-relaxed">
                       We review your request and schedule a discovery call within 24 hours
                     </p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold">
+                  <div className="flex items-start gap-2.5">
+                    <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-primary-foreground">
                       2
                     </div>
-                    <p className="text-white/80">
+                    <p className="text-muted-foreground text-sm leading-relaxed">
                       Our team designs a custom solution tailored to your needs
                     </p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold">
+                  <div className="flex items-start gap-2.5">
+                    <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-primary-foreground">
                       3
                     </div>
-                    <p className="text-white/80">
+                    <p className="text-muted-foreground text-sm leading-relaxed">
                       You receive a detailed proposal with timeline and pricing
                     </p>
                   </div>
@@ -344,12 +344,12 @@ export default function ContactPage() {
               </div>
 
               {/* Availability */}
-              <div className="p-8 bg-card border border-white/10 rounded-2xl">
-                <h3 className="text-xl font-bold mb-4">Availability</h3>
-                <p className="text-white/70 mb-4">
+              <div className="p-6 surface-elevated rounded-lg">
+                <h3 className="text-lg font-bold mb-3">Availability</h3>
+                <p className="text-muted-foreground text-sm mb-3 leading-relaxed">
                   Our team is available 24/7, every day of the week
                 </p>
-                <p className="text-sm text-white/60">
+                <p className="text-xs text-muted-foreground leading-relaxed">
                   For urgent inquiries, please call us directly or mention "urgent" in your message.
                 </p>
               </div>
