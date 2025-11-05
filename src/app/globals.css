@@ -1,70 +1,70 @@
 @import "tailwindcss";
 
 /* ============================================
-   KREATIVA AI - DESIGN SYSTEM V2
-   Futuristic minimalist professional theme
+   KREATIVA AI - DESIGN SYSTEM
+   Ultra-modern dark theme with premium finishes
    ============================================ */
 
-/* Import modern fonts - Inter for body, Outfit for headings */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+/* Import premium fonts - Inter for UI, Space Grotesk for headings */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Deep space theme with subtle navy undertones */
-  --background: 222 47% 4%;
-  --foreground: 210 40% 98%;
+  /* Pure black luxury theme - default dark mode */
+  --background: 0 0% 0%;
+  --foreground: 0 0% 98%;
 
-  /* Elevated surfaces with subtle depth */
-  --card: 222 47% 6%;
-  --card-foreground: 210 40% 98%;
+  /* Charcoal cards with silver text */
+  --card: 0 0% 8%;
+  --card-foreground: 0 0% 96%;
 
-  /* Popovers match card elevation */
-  --popover: 222 47% 6%;
-  --popover-foreground: 210 40% 98%;
+  /* Popovers with dark background */
+  --popover: 0 0% 6%;
+  --popover-foreground: 0 0% 96%;
 
-  /* Primary: Refined cyan-blue */
-  --primary: 199 89% 58%;
+  /* Primary: Electric blue with white text */
+  --primary: 214 100% 60%;
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary: Elevated surface */
-  --secondary: 222 47% 8%;
-  --secondary-foreground: 210 40% 96%;
+  /* Secondary: Deep charcoal with silver text */
+  --secondary: 0 0% 12%;
+  --secondary-foreground: 0 0% 90%;
 
-  /* Muted: Subtle elements */
-  --muted: 217 33% 12%;
-  --muted-foreground: 215 20% 65%;
+  /* Muted: Subtle dark gray with light gray text */
+  --muted: 0 0% 14%;
+  --muted-foreground: 0 0% 60%;
 
-  /* Accent: Sophisticated purple */
-  --accent: 263 70% 60%;
+  /* Accent: Violet highlight */
+  --accent: 270 70% 65%;
   --accent-foreground: 0 0% 100%;
 
-  /* Destructive: Refined red */
-  --destructive: 0 72% 58%;
+  /* Destructive: Electric red */
+  --destructive: 0 80% 60%;
   --destructive-foreground: 0 0% 100%;
 
-  /* Borders: Subtle definition */
-  --border: 217 33% 14%;
-  --input: 217 33% 10%;
-  --ring: 199 89% 58%;
+  /* Borders: Subtle dark gray with slight glow */
+  --border: 0 0% 18%;
+  --input: 0 0% 16%;
+  --ring: 214 100% 60%;
 
-  /* Minimal radius for modern aesthetic */
-  --radius: 0.5rem;
+  /* Slightly more rounded for premium feel */
+  --radius: 0.75rem;
 
-  /* Sidebar: Deep space navigation */
-  --sidebar-background: 222 47% 5%;
-  --sidebar-foreground: 210 40% 96%;
-  --sidebar-primary: 199 89% 58%;
+  /* Sidebar: Pure black with silver accents */
+  --sidebar-background: 0 0% 4%;
+  --sidebar-foreground: 0 0% 94%;
+  --sidebar-primary: 214 100% 60%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 222 47% 8%;
-  --sidebar-accent-foreground: 210 40% 94%;
-  --sidebar-border: 217 33% 12%;
-  --sidebar-ring: 199 89% 58%;
+  --sidebar-accent: 0 0% 10%;
+  --sidebar-accent-foreground: 0 0% 92%;
+  --sidebar-border: 0 0% 15%;
+  --sidebar-ring: 214 100% 60%;
 
-  /* Enhanced color palette */
-  --cyan-primary: 199 89% 58%;
-  --purple-accent: 263 70% 60%;
-  --navy-deep: 222 47% 4%;
-  --slate-muted: 215 20% 65%;
-  --surface-elevated: 222 47% 8%;
+  /* Custom luxury colors for AI theme */
+  --electric-blue: 214 100% 60%;
+  --neon-violet: 270 70% 65%;
+  --silver: 0 0% 85%;
+  --deep-charcoal: 0 0% 10%;
+  --pure-black: 0 0% 0%;
 }
 
 @theme {
@@ -109,33 +109,31 @@
   --color-sidebar-border: hsl(var(--sidebar-border));
   --color-sidebar-ring: hsl(var(--sidebar-ring));
 
-  /* Enhanced color utilities */
-  --color-cyan-primary: hsl(var(--cyan-primary));
-  --color-purple-accent: hsl(var(--purple-accent));
-  --color-navy-deep: hsl(var(--navy-deep));
-  --color-slate-muted: hsl(var(--slate-muted));
-  --color-surface-elevated: hsl(var(--surface-elevated));
+  /* Custom luxury colors */
+  --color-electric-blue: hsl(var(--electric-blue));
+  --color-neon-violet: hsl(var(--neon-violet));
+  --color-silver: hsl(var(--silver));
+  --color-deep-charcoal: hsl(var(--deep-charcoal));
+  --color-pure-black: hsl(var(--pure-black));
 
-  /* Border Radius - minimal modern aesthetic */
-  --radius-lg: calc(var(--radius) + 0.125rem);
-  --radius-md: var(--radius);
-  --radius-sm: calc(var(--radius) - 0.125rem);
-  --radius-xl: calc(var(--radius) + 0.25rem);
+  /* Border Radius - slightly larger for premium feel */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-xl: calc(var(--radius) + 4px);
 
-  /* Refined shadows - subtle depth */
-  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-sm: 0 2px 8px -2px rgb(0 0 0 / 0.1), 0 4px 12px -4px rgb(0 0 0 / 0.1);
-  --shadow-md: 0 4px 16px -4px rgb(0 0 0 / 0.2), 0 8px 24px -8px rgb(0 0 0 / 0.2);
-  --shadow-lg: 0 8px 32px -8px rgb(0 0 0 / 0.3), 0 16px 48px -12px rgb(0 0 0 / 0.3);
-  --shadow-glow: 0 0 0 1px hsl(var(--primary) / 0.1), 0 0 24px hsl(var(--primary) / 0.15);
-  --shadow-glow-accent: 0 0 0 1px hsl(var(--accent) / 0.1), 0 0 24px hsl(var(--accent) / 0.15);
+  /* Premium shadows with glow effects */
+  --shadow-glow-blue: 0 0 20px rgba(56, 189, 248, 0.3);
+  --shadow-glow-violet: 0 0 20px rgba(168, 85, 247, 0.3);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 12px 48px rgba(0, 0, 0, 0.6), 0 0 20px rgba(56, 189, 248, 0.2);
 
-  /* Smooth animations - refined timing */
-  --animate-accordion-down: accordion-down 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  --animate-accordion-up: accordion-up 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  --animate-fade-in: fade-in 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  --animate-slide-up: slide-up 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  --animate-scale-in: scale-in 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Animations - smooth and premium */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-fade-in: fade-in 0.6s ease-out;
+  --animate-slide-up: slide-up 0.6s ease-out;
+  --animate-glow-pulse: glow-pulse 2s ease-in-out infinite;
 }
 
 /* ============================================
@@ -198,17 +196,6 @@
   }
 }
 
-@keyframes scale-in {
-  from {
-    transform: scale(0.95);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
 /* ============================================
    BASE STYLES
    ============================================ */
@@ -225,86 +212,79 @@ body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 15px;
-  line-height: 1.6;
-  font-weight: 400;
-  font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1;
+  font-size: 16px;
+  line-height: 1.7;
+  font-feature-settings: "rlig" 1, "calt" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  letter-spacing: -0.011em;
 }
 
 /* ============================================
-   TYPOGRAPHY - REFINED HIERARCHY
+   TYPOGRAPHY - LUXURY HIERARCHY
    ============================================ */
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Outfit', 'Inter', sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.025em;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   color: hsl(var(--foreground));
-  line-height: 1.15;
-  margin: 0;
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: clamp(2.25rem, 4.5vw, 4rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  margin-bottom: 1.25rem;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.5rem;
 }
 
 h2 {
-  font-size: clamp(1.875rem, 3.5vw, 3rem);
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
 }
 
 h3 {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 600;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.875rem;
+  margin-bottom: 1rem;
 }
 
 h4 {
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
   font-weight: 600;
-  letter-spacing: -0.015em;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.875rem;
 }
 
 h5 {
-  font-size: clamp(1.125rem, 1.5vw, 1.25rem);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
   font-weight: 600;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.75rem;
 }
 
 h6 {
-  font-size: clamp(1rem, 1.25vw, 1.125rem);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.625rem;
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   color: hsl(var(--muted-foreground));
-  font-size: 0.9375rem;
-  line-height: 1.65;
-  letter-spacing: -0.011em;
+  font-size: 1.0625rem;
+  line-height: 1.8;
 }
 
 a {
   color: hsl(var(--primary));
   text-decoration: none;
-  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
 }
 
 a:hover {
   color: hsl(var(--accent));
+  text-shadow: 0 0 8px hsla(var(--primary), 0.4);
 }
 
 strong {
@@ -313,71 +293,68 @@ strong {
 }
 
 /* ============================================
-   BUTTON STYLES - REFINED INTERACTIONS
+   BUTTON STYLES - PREMIUM FINISHES
    ============================================ */
 
 button {
   font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  letter-spacing: -0.006em;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
 button:active {
-  transform: scale(0.98);
+  transform: translateY(0);
 }
 
 /* ============================================
-   FORM ELEMENTS - REFINED INPUTS
+   FORM ELEMENTS - DARK LUXURY STYLE
    ============================================ */
 
 input, textarea, select {
   background-color: hsl(var(--input));
   border: 1px solid hsl(var(--border));
   color: hsl(var(--foreground));
-  border-radius: var(--radius-sm);
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  font-size: 0.9375rem;
-  letter-spacing: -0.011em;
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
 }
 
 input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: hsl(var(--primary));
-  box-shadow: 0 0 0 1px hsl(var(--primary) / 0.5);
-  background-color: hsl(var(--card));
+  box-shadow: 0 0 0 3px hsla(var(--primary), 0.1), 0 0 12px hsla(var(--primary), 0.2);
 }
 
 /* ============================================
-   REFINED SHADOWS
+   PREMIUM SHADOWS & GLOWS
    ============================================ */
 
-.shadow-xs {
-  box-shadow: var(--shadow-xs);
+.shadow-sm {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.shadow-sm {
-  box-shadow: var(--shadow-sm);
+.shadow {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 .shadow-md {
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
 .shadow-lg {
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6);
 }
 
-.shadow-glow {
-  box-shadow: var(--shadow-glow);
+.shadow-glow-blue {
+  box-shadow: var(--shadow-glow-blue);
 }
 
-.shadow-glow-accent {
-  box-shadow: var(--shadow-glow-accent);
+.shadow-glow-violet {
+  box-shadow: var(--shadow-glow-violet);
 }
 
 /* ============================================
@@ -385,33 +362,24 @@ input:focus, textarea:focus, select:focus {
    ============================================ */
 
 .gradient-text {
-  background: linear-gradient(120deg, hsl(var(--primary)), hsl(var(--accent)));
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .glass-effect {
-  background: hsl(var(--card) / 0.3);
-  backdrop-filter: blur(16px) saturate(180%);
-  border: 1px solid hsl(var(--border));
-}
-
-.surface-elevated {
-  background: hsl(var(--card));
-  border: 1px solid hsl(var(--border));
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .animate-fade-in {
-  animation: fade-in 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fade-in 0.6s ease-out;
 }
 
 .animate-slide-up {
-  animation: slide-up 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.animate-scale-in {
-  animation: scale-in 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slide-up 0.6s ease-out;
 }
 
 .animate-float {
