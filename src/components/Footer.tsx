@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Logo } from './Logo';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -47,11 +48,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center shadow-glow-blue">
-                <span className="text-white font-bold text-lg">AI</span>
-              </div>
-              <span className="text-xl font-bold">
+            <div className="kreativa-logo mb-4">
+              <Logo className="w-10 h-10" />
+              <span className="kreativa-logo-text">
                 KREATIVA AI
               </span>
             </div>

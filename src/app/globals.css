@@ -385,3 +385,34 @@ input:focus, textarea:focus, select:focus {
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
+
+/* ============================================
+   LOGO COMPONENT STYLES
+   ============================================ */
+
+.kreativa-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.kreativa-logo-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.kreativa-logo-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  letter-spacing: -0.02em;
+  transition: color 0.3s ease;
+}
+
+.kreativa-logo:hover .kreativa-logo-text {
+  color: hsl(var(--primary));
+}

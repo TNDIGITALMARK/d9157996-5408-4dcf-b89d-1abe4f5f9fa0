@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
+import { Logo } from './Logo';
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,22 +19,8 @@ export function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleServicesClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    // If we're on the homepage, scroll to services section instead of navigating
-    if (pathname === '/') {
-      e.preventDefault();
-      const servicesSection = document.getElementById('services');
-      if (servicesSection) {
-        servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        setIsMobileMenuOpen(false);
-      }
-    }
-    // Otherwise, let the link navigate to /services page normally
-  };
-
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/services', label: 'Services', onClick: handleServicesClick },
     { href: '/contact', label: 'Contact' },
   ];
 
@@ -48,15 +35,11 @@ export function Navigation() {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="group">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center shadow-glow-blue">
-                <span className="text-white font-bold text-lg">AI</span>
-              </div>
-              <span className="text-xl font-bold group-hover:text-primary transition-colors">
-                KREATIVA AI
-              </span>
-            </div>
+          <Link href="/" className="group kreativa-logo">
+            <Logo className="w-10 h-10" />
+            <span className="kreativa-logo-text">
+              KREATIVA AI
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -65,7 +48,6 @@ export function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                onClick={link.onClick}
                 className="text-sm font-medium text-white/70 hover:text-white transition-colors"
               >
                 {link.label}
@@ -73,7 +55,7 @@ export function Navigation() {
             ))}
             <Link
               href="/contact"
-              className="px-6 py-2.5 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all hover:scale-105 shadow-glow-blue"
+              className="group px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/20 text-white rounded-xl font-semibold transition-all hover:scale-105 backdrop-blur-sm flex items-center gap-2"
             >
               Build Your AI Bot
             </Link>
@@ -97,13 +79,7 @@ export function Navigation() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  onClick={(e) => {
-                    if (link.onClick) {
-                      link.onClick(e);
-                    } else {
-                      setIsMobileMenuOpen(false);
-                    }
-                  }}
+                  onClick={() => setIsMobileMenuOpen(false)}
                   className="text-sm font-medium text-white/70 hover:text-white transition-colors py-2"
                 >
                   {link.label}
@@ -112,7 +88,7 @@ export function Navigation() {
               <Link
                 href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all text-center shadow-glow-blue mt-2"
+                className="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/20 text-white rounded-xl font-semibold transition-all hover:scale-105 backdrop-blur-sm text-center mt-2"
               >
                 Build Your AI Bot
               </Link>
