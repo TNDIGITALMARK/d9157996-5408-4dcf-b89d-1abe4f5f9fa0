@@ -61,10 +61,11 @@ export default function ContactPage() {
   ];
 
   const budgetRanges = [
+    '$0 - $5,000',
     '$5,000 - $15,000',
     '$15,000 - $30,000',
-    '$30,000 - $50,000',
-    '$50,000+',
+    '$30,000+',
+    'Custom',
   ];
 
   const timelines = [

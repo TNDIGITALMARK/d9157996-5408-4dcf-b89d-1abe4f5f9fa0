@@ -164,6 +164,28 @@ export default function HomePage() {
                       priority
                     />
                   </div>
+                ) : member.name === 'Val Rojko' ? (
+                  <div className="w-20 h-20 rounded-full mx-auto mb-6 overflow-hidden shadow-glow-blue relative">
+                    <Image
+                      src="/generated/val-rojko-initials.png"
+                      alt="Val Rojko"
+                      width={80}
+                      height={80}
+                      className="object-cover object-center w-full h-full"
+                      priority
+                    />
+                  </div>
+                ) : member.name === 'Thor Frangež Križančič' ? (
+                  <div className="w-20 h-20 rounded-full mx-auto mb-6 overflow-hidden shadow-glow-blue relative">
+                    <Image
+                      src="/generated/thor-frangez-initials.png"
+                      alt="Thor Frangež Križančič"
+                      width={80}
+                      height={80}
+                      className="object-cover object-center w-full h-full"
+                      priority
+                    />
+                  </div>
                 ) : (
                   <div className="w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-6 flex items-center justify-center text-3xl font-bold shadow-glow-blue">
                     {member.name.split(' ').map(n => n[0]).join('')}
